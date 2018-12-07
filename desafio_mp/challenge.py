@@ -12,7 +12,7 @@ class PythonChallengeMPRJ():
 
     return f1
 
-  def fibonacci_complexidade(self, n):
+  def fibonacci_complexidade(self, n=1000):
     # Questão 2
 
     '''
@@ -22,7 +22,6 @@ class PythonChallengeMPRJ():
     fibonacci é O (n^2).
     Logo, se n=10000, O(10000^2)
     '''
-    n = 10000
     resultado = self.fibonacci(n)
 
     return resultado
@@ -68,3 +67,13 @@ class PythonChallengeMPRJ():
 
 if __name__ == '__main__':
   challenge = PythonChallengeMPRJ()
+
+  # Executa funções
+
+  print(challenge.fibonacci(8))
+  print(challenge.fibonacci_complexidade())
+  vetor = [0, 12, 29, 31, 43, 54, 61, 73, 84, 95, 101, 110, 122] # Declara vetor inicial
+  chave = len(vetor) -1 # A chave é o último termo (pior caso) para listar todos os nós da árvore
+  print(challenge.busca_binaria(vetor, 0, len(vetor)-1, chave))
+  print(challenge.acesso_servidor())
+  print(challenge.normaliza_com_regex())
